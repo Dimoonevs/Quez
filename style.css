@@ -1,0 +1,252 @@
+/* Обнуления */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  :focus, :active {
+    outline: none;
+  }
+  
+  a:focus, a:active {
+    outline: none;
+  }
+  
+  nav, footer, header, aside {
+    display: block;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-color:rgb(255, 255, 255);
+    font-family: "Gilroy";
+  }
+  
+  input, button, textarea {
+    font-family: inherit;
+  }
+  
+  input::-ms-clear {
+    display: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+  a, a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  img {
+    vertical-align: top;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  main{
+    overflow-x: hidden;
+  }
+  /*--------------------*/
+
+  @font-face {
+    font-family: "Proxima";
+    src: url(fonts/PROXIMA-NOVA-SEMIBOLD.TTF);
+    font-weight: 300; 
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+      font-family: "Proxima";
+      src: url(fonts/PROXIMA-NOVA-REGULAR.TTF);
+      font-weight: 400; 
+      font-style: normal;
+      font-display: fallback;
+  }
+  
+  @font-face {
+      font-family: "Proxima";
+      src: url(fonts/PROXIMA-NOVA-BOLD.TTF);
+      font-weight: 500; 
+      font-style: normal;
+      font-display: fallback;
+  }
+
+
+.products_block{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 15px;
+    max-width: 1560px;
+    margin: 0 auto;
+}
+.product_card{
+    border: 1px solid #E5E5E5;
+    padding: 15px;
+    font-family: 'Proxima';
+    transition: .5s;
+    margin: 0 15px;
+    width: calc(100% / 3 - 30px);
+}
+
+.card_imege{
+    position: relative;
+    overflow: hidden;
+    height: 305px;
+}
+.card_imege img{
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+.image_sale{
+    background-color:#C57381;
+    padding: 3px 10px;
+    max-width: 50px;
+    color:#fff;
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+.image_new{
+    background-color:#449C73;
+    max-width: 50px;
+    color:#fff;
+    padding: 3px 10px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+.image_like{
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    width: 40px;
+    height: 39px;
+    right: 5px;
+    top: 5px;
+    text-align: center;
+    padding-top:10px ;
+    transition: .5s;
+}
+.card_imege{
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.card_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.text_name{
+    padding-bottom: 15px;
+    font-size: 14px;
+    line-height: 17px;
+    transition: .5s;
+    cursor: pointer;
+}
+.text_price{
+    padding-bottom: 14px;
+}
+.text_prices{
+    display: flex;  
+
+}
+.prices_price{
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+}
+.prices_salce{
+    font-size: 14px;
+    line-height: 15px;
+    color: #C4C4C4;
+    text-decoration-line: line-through;
+}
+.text_price{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+}
+.text_availability{
+    font-size: 14px;
+    line-height: 15px;
+    color: #449C73;
+}
+.card_bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.card_bottom button{
+    background: #EC8899;
+    width: 110px;
+    height: 30px;
+    align-self: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}   
+.card_bottom button img{
+    margin-right: 9px;
+}
+.card_bottom button p{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 3px;
+}
+.product_card:hover{
+    border: 1px solid #EC8899;
+}
+.product_card:hover .text_name{
+    color: #EC8899;
+
+}
+.image_like:hover{
+    background-color:#EC8899;
+}
+.image_like svg path{
+    transition: .5s;
+}
+.image_like:hover svg path{
+    fill: #fff;
+}
+.card_bottom button:hover{
+    background-color:#EAB5BE;
+}
+.card_imege img:hover{
+    transform: scale(1.1);
+}
